@@ -37,7 +37,7 @@
         <!-- Spinner Start -->
         
         <!-- Spinner End -->
-
+        {% include "jobs/job-detail.html" with j=jobs_view %}
 
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
@@ -55,7 +55,7 @@
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Jobs</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="{% static 'job-list' %}" class="dropdown-item">Job List</a>
-                            <a href="{% static 'job-detail' j.id %}" class="dropdown-item active">Job Detail</a>
+                            <a href="{% static 'job-detail' %}" class="dropdown-item active">Job Detail</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -91,7 +91,7 @@
 
 
         <!-- Job Detail Start -->
-        {% include "_job-detail.html" with jobs=jobs_view%}
+
         <!-- Job Detail End -->
 
         

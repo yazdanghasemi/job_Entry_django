@@ -14,4 +14,24 @@ class Employer(models.Model):
     income = models.IntegerField()
     topic = models.CharField(max_length=20)
     logo = models.ImageField(upload_to='jobs/')
-    summary = models.TextField()
+    
+    
+    summary1=models.CharField(max_length=100)
+    summary2=models.CharField(max_length=100)
+    summary3=models.CharField(max_length=100)
+    summary4=models.CharField(max_length=100)
+    summary5=models.CharField(max_length=100)
+
+
+
+    response1=models.CharField(max_length=100)
+    response2=models.CharField(max_length=100)
+    response3=models.CharField(max_length=100)
+    response4=models.CharField(max_length=100)
+    response5=models.CharField(max_length=100)
+
+    company1=models.CharField(max_length=100)
+    company2=models.CharField(max_length=100)
+    company3=models.CharField(max_length=100)
+    company4=models.CharField(max_length=100)
+    company5=models.CharField(max_length=100)
