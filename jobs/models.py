@@ -16,5 +16,8 @@ class Employee(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20)
     about = models.TextField()
+    employ =models.ForeignKey(Employer,on_delete=models.CASCADE)
     picture = models.ImageField(upload_to="user/")
 
+    def __str__(self):
+        return f"{self.name}"

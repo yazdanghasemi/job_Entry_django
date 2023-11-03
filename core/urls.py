@@ -25,10 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name='index'),
     path("category", category, name='category'),
-    path("job_detail/<int:id>", job_detail, name='job-detail'),
-    path("error_404", error_404, name='error-404'),
-    path("testpage", test_page, name='test-page'),
-    path("job_list/", include(joblist_url),name='job-list'),
+    path("detail/<int:id>", job_detail, name='job-detail'),
+    path("error", error_404, name='error-404'),
+    path("test", test_page, name='test-page'),
+    path("list/", include(joblist_url),name='job-list'),
 
 ]
 urlpatterns += static(settings.MEDIA_URL,
