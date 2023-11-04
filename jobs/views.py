@@ -23,7 +23,7 @@ def job_detail(request, id):
         return render(request, 'jobs/job.html', {"jobs_view": jobs_objects,"forms":forms})
 
     elif request.method == 'POST':
-        forms = EmployeeForm(request.POST, request.FILES)
+        forms = EmployeeForm(request.POST,request.FILES)
 
         if forms.is_valid():
             forms.save()
