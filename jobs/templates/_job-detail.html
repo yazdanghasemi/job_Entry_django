@@ -1,0 +1,84 @@
+{% load static %}
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row gy-5 gx-4">
+            <div class="col-lg-8">
+                <div class="d-flex align-items-center mb-5">
+                    <img class="flex-shrink-0 img-fluid border rounded" src="{{jobs.logo.url}}" alt="" style="width: 80px; height: 80px;">
+                    <div class="text-start ps-4">
+                        <h3 class="mb-3">{{jobs.topic}}</h3>
+                        <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{jobs.country}}</span>
+                        <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>{{jobs.type_job}}</span>
+                        <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>{{jobs.income}}</span>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <h4 class="mb-3">{{job.topic}}</h4>
+                    
+                    <h4 class="mb-3">Responsibility</h4>
+                    <p>{{jobs.response1}}</p>
+                    <p>{{jobs.response2}}</p>
+                    <p>{{jobs.response3}}</p>
+                    <p>{{jobs.response4}}</p>
+                    <p>{{jobs.response5}}</p>
+                    
+                    
+
+                    
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                    <h4 class="mb-4">Job Summery</h4>
+                    <p><i class="fa fa-angle-right text-primary me-2"></i>{{jobs.summary1}}</p>
+                    <p><i class="fa fa-angle-right text-primary me-2"></i>{{jobs.summary2}}</p>
+                    <p><i class="fa fa-angle-right text-primary me-2"></i>{{jobs.summary3}}</p>
+                    <p><i class="fa fa-angle-right text-primary me-2"></i>{{jobs.summary4}}</p>
+                    <p><i class="fa fa-angle-right text-primary me-2"></i>{{jobs.summary5}}</p>
+                    
+                </div>
+                
+                <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+                    <h4 class="mb-4">Company Detail</h4>
+                    <p class="m-0">{{jobs.company1}}</p>
+                    <p class="m-0">{{jobs.company2}}</p>
+                    <p class="m-0">{{jobs.company3}}</p>
+                    <p class="m-0">{{jobs.company4}}</p>
+                    <p class="m-0">{{jobs.company5}}</p>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 col-14">
+                <h4 class="mb-4">Apply For The Job</h4>
+                <form action="{% url "job-detail" j.id%}" method="post" enctype="multipart/form-data" class="col-12 col-sm-6">
+                    {% csrf_token %}
+                    <div class="row g-4">
+                        {% comment %} <div class="col-12 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Your Name" name="job_name">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="email" class="form-control" placeholder="Your Email" name="job_email">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" class="form-control" placeholder="phone" name="job_phone">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="file" class="form-control bg-white" name="job_picture">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="5" placeholder="About" name="job_about"></textarea>
+                        </div>
+                        <div class="col-12"> {% endcomment %}
+                            {{forms}}
+                            <button class="btn btn-primary w-100" type="submit">Apply Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
